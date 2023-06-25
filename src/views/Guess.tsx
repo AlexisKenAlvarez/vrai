@@ -1,5 +1,9 @@
-import { motion } from 'framer-motion'
+
 import { useInView } from 'react-intersection-observer'
+import { useScroll, useTransform, motion, useSpring } from 'framer-motion'
+import { useRef } from 'react'
+import BotTop from '../anim/BotTop'
+
 
 const Guess = () => {
 
@@ -51,8 +55,18 @@ const Guess = () => {
         }
     }
 
+    const containerRef = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ['start end', 'end end']
+    })
+
+
+    const scale = useTransform(scrollYProgress, [0, 0.8], [0.5, 1])
+    const smoothScale = useSpring(scale)
+
     return (
-        <section className="w-full min-h-screen py-10 bg-bg px-5">
+        <motion.section className="w-full min-h-screen h-auto py-10 bg-bg px-5" style={{ scale: smoothScale }} ref={containerRef}>
 
             <div className="max-w-[1500px] w-full h-auto mx-auto flex items-center gap-x-2 mt-10 lg:flex-row flex-col">
                 <div className="w-full" ref={questionRef}>
@@ -61,10 +75,13 @@ const Guess = () => {
                         <motion.h2 variants={item2} className="text-8xl origin-bottom">?</motion.h2>
                         <motion.h2 variants={item3} className="text-6xl rotate-[20deg] origin-bottom">?</motion.h2>
                     </motion.div>
-                    <img src="/guess.webp" alt="Guess" className="object-cover mx-auto lg:mx-0 lg:w-full  lg:h-full" />
+
+                    <BotTop>
+                        <img src="/guess.webp" alt="Guess" className="object-cover mx-auto lg:mx-0 lg:w-full  lg:h-full" />
+                    </BotTop>
                 </div>
                 <div className="w-full h-full">
-                    <h1 className="text-4xl font-nexa">GUESS THE <span className="text-lavender">AI</span></h1>
+                    <h1 className="text-4xl font-nexa">GUESS THE <span className="text-lavender drop-shadow-road">AI</span></h1>
 
                     <div className="flex flex-col mt-3 gap-y-8 max-w-[40rem]">
                         <p className="">
@@ -85,7 +102,7 @@ const Guess = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

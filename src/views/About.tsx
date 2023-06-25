@@ -2,7 +2,7 @@ import BotTop from "../anim/BotTop";
 
 const About = () => {
     return (
-        <section className="w-full h-auto p-10 pb-20 px-5 bg-black relative overflow-x-hidden">
+        <section className="w-full h-auto p-10 pb-20 px-5 bg-black relative overflow-x-hidden" id="about">
             <img src="/stars.webp" alt="Stars" className="w-full h-full object-cover absolute top-0 left-0" />
 
 

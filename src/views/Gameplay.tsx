@@ -11,13 +11,13 @@ const Gameplay = () => {
         target: containerRef,
         offset: ['start end', 'end end']
     })
-    const rotation = useTransform(scrollYProgress, [0, 1], [0, 360])
-    const rotation2 = useTransform(scrollYProgress, [0, 1], [45, 420])
+
 
     const opac = useTransform(scrollYProgress, [0, 0.8], [0.5, 1])
     const opacity = useSpring(opac)
 
-
+    const rotation = useTransform(scrollYProgress, [0, 1], [0, 360])
+    const rotation2 = useTransform(scrollYProgress, [0, 1], [45, 420])
 
     const rotationLeft = useSpring(rotation)
     const rotationRight = useSpring(rotation2)
@@ -25,7 +25,7 @@ const Gameplay = () => {
 
 
     return (
-        <motion.section className="w-full min-h-screen h-auto px-5 bg-bg relative pb-24 overflow-hidden" style={{ scale: opacity }} ref={containerRef}>
+        <motion.section className="w-full min-h-screen h-auto px-5 bg-bg relative pb-24 overflow-hidden" style={{ scale: opacity }} ref={containerRef} id="gameplay">
             <img src="/gameplaybg.webp" alt="Gameplay Background" className="absolute w-full h-full object-cover object" />
             <div className="max-w-[1500px] w-full mx-auto h-auto">
 

@@ -9,22 +9,22 @@ const Nav = () => {
     const navList = [
         {
             label: 'About',
-            slug: '/about',
+            slug: 'about',
             icon: <FaBook />
         },
         {
             label: 'Gameplay',
-            slug: '/gameplay',
+            slug: 'gameplay',
             icon: <GiConsoleController className="text-xl" />
         },
         {
             label: 'Token',
-            slug: '/token',
+            slug: 'token',
             icon: <GiToken className="text-xl" />
         },
         {
             label: 'Roadmap',
-            slug: '/roadmap',
+            slug: 'roadmap',
             icon: <RiRoadMapFill className="text-xl" />
         },
     ]

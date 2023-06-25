@@ -3,12 +3,38 @@ import LeftRight from "../anim/LeftRight";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Hero = () => {
 
     const ca = '0x000000000000000000000000000000000000dEaD'
 
+    const handleCopy = () => {
+        navigator.clipboard.writeText(ca)
+        notify("Copied to clipboard!")
+    }
+
+    const notify = (e: string) => {
+        toast.success(e);
+    }
+
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="w-full h-screen px-5 bg-bg relative overflow-hidden">
+            <ToastContainer
+                position="bottom-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Flip}
+            />
+
             <img src="/herobg.png" alt="background" className="absolute top-0 left-0 w-full h-full object-cover" />
 
             <motion.img initial={{ opacity: 0.7, x: 200, y: 100 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ duration: 2, type: "spring" }} src="/bot.webp" alt="Robot" className="absolute bottom-0 right-0 lg:w-auto w-[30rem] lg:h-[95vh] md:block hidden" />
@@ -38,7 +64,7 @@ const Hero = () => {
 
                     <div className="mt-5 max-w-[35rem] font-regular text-white/80 text-center md:text-left mx-auto md:mx-0">
                         <LeftRight delay={0.2}>
-                            <p className="sm:text-base text-[12px]">{ca}</p>
+                            <p className="sm:text-base text-[12px] cursor-pointer hover:text-lavender transition-colors ease-in-out duration-300" onClick={handleCopy}>{ca}</p>
                         </LeftRight>
 
                         <LeftRight delay={0.3}>
