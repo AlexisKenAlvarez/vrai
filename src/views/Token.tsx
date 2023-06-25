@@ -11,7 +11,10 @@ const Token = () => {
                     VR AI
                 </h1>
 
-                <div className="flex flex-col mt-10 gap-y-4">
+                <div className="flex flex-col mt-10 gap-y-4 w-fit mx-auto px-10 relative">
+                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -left-1 h-[90%]" />
+                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -right-1 h-[90%] rotate-180" />
+
                     <div className="bg-lavender/10 backdrop-blur-sm border-2 border-lavender relative max-w-[70rem] h-auto mx-auto p-7">
                         <p className="">
                             <span className="font-bold">VRAI token</span> is a cryptocurrency designed to function as the sole driver of the VRAI metaverse economy. The VRAI project aims to create a fully immersive virtual world that allows users to interact with each other and with digital assets in a three-dimensional space, using augmented reality &#40;AR&#41; and virtual reality &#40;VR&#41; technologies.
