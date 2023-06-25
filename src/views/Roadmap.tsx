@@ -60,15 +60,15 @@ const Roadmap = () => {
                     </h1>
                 </div>
 
-                <div className="flex flex-col gap-y-[25rem] w-fit mx-auto relative mt-20" ref={containerRef}>
+                <div className="flex flex-col gap-y-28 md:gap-y-[25rem] w-fit mx-auto relative mt-20" ref={containerRef}>
 
-                    <motion.div style={{ scaleY: scaleYSmooth }} className=" origin-top middle-line w-3 h-[90%] left-0 right-0 mx-auto bg-lavender absolute mt-10 rounded-full drop-shadow-road"></motion.div>
+                    <motion.div style={{ scaleY: scaleYSmooth }} className=" origin-top middle-line w-3 h-[90%] left-0 right-0 mx-auto bg-lavender absolute mt-10 rounded-full drop-shadow-road md:block hidden"></motion.div>
 
                     {data.map((items, i) => {
                         return (
-                            <div className={`max-w-[55rem] w-full h-auto flex items-center gap-x-[20rem] mx-auto ${i % 2 !== 0 ? 'flex-row-reverse' : ''}`} key={i}>
-                                <div className={`${i % 2 === 0 ? 'text-right' : ''} max-w-[70rem] w-full`}>
-                                    <h1 className="font-nexa text-3xl text-lavender lg:hidden block">{i + 1}{items.title}</h1>
+                            <div className={`max-w-[55rem] w-full h-auto flex items-center gap-x-[14rem] lg:gap-x-[20rem] mx-auto ${i % 2 !== 0 ? 'flex-row-reverse' : ''}`} key={i}>
+                                <div className={`${i % 2 === 0 ? 'text-center md:text-right' : 'text-center md:text-left'} max-w-[70rem] w-full`}>
+                                    <h1 className="font-nexa text-3xl text-lavender md:hidden block">{i + 1}{items.title}</h1>
                                     <h1 className="font-nexa text-2xl">Quarter 2023</h1>
                                     <ul className="font-regular">
                                         {items.description.map((items, index) => {
@@ -78,7 +78,7 @@ const Roadmap = () => {
                                         })}
                                     </ul>
                                 </div>
-                                <div className="max-w-[55rem] w-full">
+                                <div className="max-w-[55rem] w-full md:block hidden">
                                     <h1 className="text-8xl font-nexa text-lavender text-left">{i + 1}{items.title}</h1>
                                 </div>
                             </div>
