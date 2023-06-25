@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import About from "./views/About";
 import Gameplay from "./views/Gameplay";
+import Guess from "./views/Guess";
 import Hero from "./views/Hero";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <Hero />
             <About />
             <Gameplay />
+            <Guess />
         </section>
     );
 }

@@ -15,6 +15,9 @@ export default {
         lavender: '#9F7FF3',
         pnk: '#C936B7',
         bg: '#040513'
+      },
+      dropShadow: {
+        shapes: '0px 0px 10px #C936B7'
       }
     },
   },
