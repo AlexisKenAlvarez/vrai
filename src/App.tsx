@@ -11,7 +11,7 @@ import Token from "./views/Token";
 
 const App = () => {
     return (
-        <section className="w-full h-auto relative text-white font-opensans">
+        <section className="w-full h-auto relative text-white font-opensans bg-bg overflow-hidden">
             <Nav />
             <Hero />
             <About />

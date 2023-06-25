@@ -3,7 +3,7 @@ import { GiConsoleController, GiToken } from 'react-icons/gi'
 import { RiRoadMapFill } from 'react-icons/ri'
 import { useEffect, useState } from 'react'
 import { TbArrowBigDownLineFilled } from 'react-icons/tb'
-
+import { motion } from 'framer-motion'
 
 const Nav = () => {
     const navList = [
@@ -68,7 +68,7 @@ const Nav = () => {
                 onClick={handleTop}>
                 <TbArrowBigDownLineFilled className="text-lavender" />
             </button>
-            <nav className="w-full h-auto absolute top-0 left-0 px-5 z-20">
+            <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="w-full h-auto absolute top-0 left-0 px-5 z-20">
                 <div className="max-w-[1500px] w-full h-auto py-7 flex items-center gap-x-10 mx-auto">
                     <img src="/logo.webp" alt="Logo" className="w-16 cursor-pointer" />
                     <ul className="flex items-center gap-x-10 sm:gap-x-16 text-sm font-medium">
@@ -93,7 +93,7 @@ const Nav = () => {
                         })}
                     </ul>
                 </div>
-            </nav>
+            </motion.nav>
         </>
     );
 }
