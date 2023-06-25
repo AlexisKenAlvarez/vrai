@@ -17,7 +17,9 @@ export default {
         bg: '#040513'
       },
       dropShadow: {
-        shapes: '0px 0px 10px #C936B7'
+        shapes: '0px 0px 10px #C936B7',
+        road: '0px 0px 10px #9F7FF3'
+
       }
     },
   },

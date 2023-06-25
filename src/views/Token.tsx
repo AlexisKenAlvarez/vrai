@@ -1,19 +1,22 @@
 const Token = () => {
     return (
-        <section className="w-full h-screen py-10 px-5 relative bg-bg overflow-hidden">
+        <section className="w-full min-h-screen py-10 px-5 relative bg-bg overflow-hidden font-regular">
             <img src="/tokenbg.webp" alt="Token BG" className="w-full h-full object-cover absolute" />
 
             <div className="max-w-[1500px] mx-auto w-full h-auto overflow-hidden">
-                <h1 className="text-9xl text-white/10 absolute left-0 right-0 text-center font-nexa">TOKEN</h1>
+                <h1 className="text-9xl text-white/10 absolute left-0 right-0 text-center font-nexa select-none">TOKEN</h1>
                 <h1 className="text-4xl font-nexa text-center mt-11">TOKEN</h1>
 
                 <h1 className="text-[#030222] stroked purp-shadow text-center text-7xl font-nexa mt-10 relative w-fit mx-auto">
                     VR AI
                 </h1>
 
-                <div className="flex flex-col mt-10 gap-y-4 w-fit mx-auto px-10 relative">
-                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -left-1 h-[90%]" />
-                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -right-1 h-[90%] rotate-180" />
+                <div className="flex flex-col mt-10 gap-y-4 w-fit mx-auto xl:px-10 relative sm:text-base text-sm">
+
+
+                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -left-1 h-[90%] xl:block hidden" />
+                    <img src="/tokensides.webp" alt="Token Sides" className="absolute -right-1 h-[90%] rotate-180 xl:block hidden" />
+
 
                     <div className="bg-lavender/10 backdrop-blur-sm border-2 border-lavender relative max-w-[70rem] h-auto mx-auto p-7">
                         <p className="">

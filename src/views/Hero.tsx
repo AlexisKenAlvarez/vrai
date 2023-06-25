@@ -30,17 +30,27 @@ const Hero = () => {
                     </div>
 
                     <div className="mt-6 flex items-center gap-x-2 w-fit md:mx-0 mx-auto">
-                        <Button text="Buy Token" />
+                        <a href="https://app.pulsex.com/swap?outputCurrency=0x00dfd2e55ab193d5ceedf4f02e67403f578c71f9"
+                            className="min-w-fit"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <Button text="Buy Token" />
+                        </a>
 
-                        <button className="w-fit px-5 py-[10px] text-sm rounded-sm hover:bg-white/10 transition-all ease-in-out duration-300">
-                            Chart
-                        </button>
+                        <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0xb326f49bc0a75d536522d93cebf046bda480adfd"
+                            className="w-full h-full"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <button className="w-fit px-5 py-[10px] text-sm rounded-sm hover:bg-white/10 transition-all ease-in-out duration-300">
+                                Chart
+                            </button>
+                        </a>
                     </div>
 
                 </div>
             </div>
 
-        </section>
+        </section >
     );
 }
 

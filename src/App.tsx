@@ -5,6 +5,7 @@ import Casino from "./views/Casino";
 import Gameplay from "./views/Gameplay";
 import Guess from "./views/Guess";
 import Hero from "./views/Hero";
+import Roadmap from "./views/Roadmap";
 import Token from "./views/Token";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Adventure />
             <Casino />
             <Token />
+            <Roadmap />
         </section>
     );
 }
