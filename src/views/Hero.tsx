@@ -18,9 +18,6 @@ const Hero = () => {
             <div className="overflow-hidden h-auto w-full">
                 <div className="max-w-[1500px] w-full h-auto mx-auto relative z-10 mt-[10rem]">
 
-
-
-
                     <div className="md:text-7xl text-5xl text-center md:text-left mx-auto md:mx-0 font-[700] font-nexa relative w-fit">
                         <img src="/bitwin.webp" alt="Star" className="absolute -right-20 top-2 md:block hidden" />
                         <h1 className="">EXPERIENCE THE</h1>

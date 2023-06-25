@@ -1,5 +1,6 @@
 import Nav from "./components/Nav";
 import About from "./views/About";
+import Adventure from "./views/Adventure";
 import Gameplay from "./views/Gameplay";
 import Guess from "./views/Guess";
 import Hero from "./views/Hero";
@@ -12,6 +13,7 @@ const App = () => {
             <About />
             <Gameplay />
             <Guess />
+            <Adventure />
         </section>
     );
 }
