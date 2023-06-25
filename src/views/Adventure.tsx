@@ -5,7 +5,7 @@ const Adventure = () => {
     return (
         <section className="w-full min-h-screen py-10 bg-bg px-5">
 
-            <div className="max-w-[1500px] w-full h-auto mx-auto flex items-center gap-x-2 mt-10 lg:flex-row flex-col-reverse">
+            <div className="max-w-[1500px] w-full h-auto mx-auto flex items-center gap-x-2 mt-10 lg:flex-row flex-col-reverse z-10 relative">
                 <div className="w-full h-full">
                     <h1 className="text-4xl font-nexa">VRAI <span className="text-lavender">ADVENTURE</span></h1>
 

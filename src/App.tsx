@@ -1,9 +1,11 @@
 import Nav from "./components/Nav";
 import About from "./views/About";
 import Adventure from "./views/Adventure";
+import Casino from "./views/Casino";
 import Gameplay from "./views/Gameplay";
 import Guess from "./views/Guess";
 import Hero from "./views/Hero";
+import Token from "./views/Token";
 
 const App = () => {
     return (
@@ -14,6 +16,8 @@ const App = () => {
             <Gameplay />
             <Guess />
             <Adventure />
+            <Casino />
+            <Token />
         </section>
     );
 }
