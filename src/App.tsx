@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import About from "./views/About";
 import Adventure from "./views/Adventure";
@@ -20,6 +21,7 @@ const App = () => {
             <Casino />
             <Token />
             <Roadmap />
+            <Footer />
         </section>
     );
 }
